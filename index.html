@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>A&S Construction • Visual Flow</title>
-    <!-- Font Awesome 6 -->
+    <title>A&S Construction | Premium Flow · Dark Navy</title>
+    <!-- Font Awesome 6 minimal usage (only essential icons) -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <!-- Google Fonts: Plus Jakarta Sans (modern) -->
+    <!-- Google Font: Plus Jakarta Sans (clean, premium) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
@@ -19,51 +19,40 @@
 
         body {
             font-family: 'Plus Jakarta Sans', sans-serif;
-            background-color: #eef2f6;
-            color: #13293D;
-            line-height: 1.4;
+            background-color: #f2f5f9;
+            color: #162b3a;
+            line-height: 1.5;
         }
 
-        /* Dark navy as requested */
+        /* Dark navy premium palette */
         :root {
-            --navy: #0B2A40;        /* deep navy */
-            --navy-light: #1F4C6B;
-            --navy-dark: #051f30;
-            --sand: #E9DCCD;         /* warm neutral */
-            --gold-muted: #C9A77D;    /* soft gold */
+            --navy: #0a2538;        /* deep, rich navy */
+            --navy-light: #254f6e;
+            --navy-dark: #031825;
+            --gold: #c6a575;         /* soft gold */
+            --cream: #efe7db;
             --white: #ffffff;
-            --off-white: #F8F5F0;
+            --off-white: #f8f7f4;
+            --border-light: rgba(198, 165, 117, 0.3);
         }
 
         .container {
-            max-width: 1400px;
+            max-width: 1300px;
             margin: 0 auto;
             padding: 0 30px;
         }
 
-        /* ----- MUCH FLOW: full bleed sections, large images ----- */
-        section {
-            position: relative;
-        }
-
-        .full-image {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        /* Header - transparent overlay on first image */
+        /* ----- FLOW HEADER (minimal, logo image) ----- */
         .header {
             position: absolute;
             top: 0;
             left: 0;
             width: 100%;
-            z-index: 20;
+            z-index: 100;
             padding: 25px 0;
-            background: linear-gradient(180deg, rgba(11,42,64,0.9) 0%, rgba(11,42,64,0.4) 100%);
-            backdrop-filter: blur(6px);
-            -webkit-backdrop-filter: blur(6px);
-            border-bottom: 1px solid rgba(201,167,125,0.4);
+            background: linear-gradient(180deg, rgba(10,37,56,0.9) 0%, rgba(10,37,56,0.3) 100%);
+            backdrop-filter: blur(8px);
+            border-bottom: 1px solid var(--border-light);
         }
 
         .header .container {
@@ -73,52 +62,41 @@
             flex-wrap: wrap;
         }
 
-        .logo h1 {
-            font-size: 2.4rem;
-            font-weight: 800;
-            color: white;
-            letter-spacing: -0.5px;
-            line-height: 1.1;
-        }
-        .logo span {
-            font-weight: 400;
-            font-size: 1.1rem;
-            color: var(--sand);
-            display: block;
-            letter-spacing: 2px;
+        .logo-img img {
+            height: 70px;
+            width: auto;
+            background: transparent;
+            filter: drop-shadow(0 4px 8px rgba(0,0,0,0.3));
         }
 
-        .nav-cta {
+        .header-cta {
             display: flex;
             gap: 20px;
-            align-items: center;
         }
-        .nav-cta a {
+        .header-cta a {
             text-decoration: none;
             font-weight: 600;
-        }
-        .phone-link {
-            background: rgba(255,255,255,0.1);
-            border: 1px solid var(--gold-muted);
-            color: white;
-            padding: 12px 24px;
-            border-radius: 60px;
+            padding: 12px 28px;
+            border-radius: 100px;
             display: flex;
             align-items: center;
             gap: 10px;
+            transition: 0.2s;
         }
-        .estimate-link {
-            background: var(--gold-muted);
+        .header-phone {
+            background: rgba(255,255,255,0.1);
+            border: 1px solid var(--gold);
+            color: white;
+        }
+        .header-estimate {
+            background: var(--gold);
             color: var(--navy-dark);
-            padding: 12px 32px;
-            border-radius: 60px;
-            font-weight: 700;
         }
 
-        /* HERO - full screen image section */
+        /* ----- HERO FULLSCREEN (flow, single large image) ----- */
         .hero {
             height: 100vh;
-            min-height: 700px;
+            min-height: 750px;
             position: relative;
             display: flex;
             align-items: flex-end;
@@ -135,166 +113,132 @@
             height: 100%;
             z-index: 0;
         }
-
         .hero-bg img {
             width: 100%;
             height: 100%;
             object-fit: cover;
-            filter: brightness(0.7) saturate(1.2);
+            filter: brightness(0.65) saturate(1.1);
         }
-
         .hero-overlay {
             position: absolute;
             top: 0; left: 0; width: 100%; height: 100%;
-            background: linear-gradient(0deg, rgba(11,42,64,0.7) 0%, rgba(11,42,64,0.2) 50%);
+            background: linear-gradient(0deg, rgba(10,37,56,0.8) 0%, rgba(10,37,56,0.2) 60%);
             z-index: 1;
         }
-
         .hero-content {
             position: relative;
             z-index: 5;
             max-width: 1000px;
-            margin: 0 auto 80px auto;
+            margin: 0 auto 100px auto;
             text-align: center;
             padding: 0 20px;
         }
-
         .hero-content h2 {
             font-size: 5.5rem;
-            font-weight: 800;
+            font-weight: 700;
             line-height: 1.1;
+            letter-spacing: -0.02em;
             text-shadow: 0 5px 20px rgba(0,0,0,0.4);
         }
-
-        .hero-content h2 i {
-            color: var(--gold-muted);
-            font-style: normal;
-            border-bottom: 4px solid var(--gold-muted);
+        .hero-content h2 span {
+            color: var(--gold);
+            border-bottom: 4px solid var(--gold);
         }
-
         .hero-tag {
             font-size: 1.5rem;
-            margin: 20px 0;
-            color: var(--sand);
+            margin: 25px 0;
+            color: var(--cream);
+            font-weight: 300;
         }
-
         .hero-badge {
-            background: rgba(11,42,64,0.7);
+            background: rgba(10,37,56,0.6);
             backdrop-filter: blur(4px);
-            border: 1px solid var(--gold-muted);
-            padding: 12px 30px;
+            border: 1px solid var(--gold);
+            padding: 10px 30px;
             border-radius: 60px;
             display: inline-block;
-            font-weight: 500;
         }
 
-        /* ---- floating whatsapp (always visible) ---- */
-        .float-wa {
-            position: fixed;
-            bottom: 30px;
-            right: 30px;
-            background: #25D366;
-            width: 75px;
-            height: 75px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-size: 40px;
-            box-shadow: 0 15px 30px rgba(0,80,50,0.4);
-            z-index: 9999;
-            border: 3px solid white;
-            text-decoration: none;
-            transition: 0.2s;
-        }
-        .float-wa:hover { background: #20b359; transform: scale(1.1) rotate(2deg); }
-
-        /* ---- trust strip minimal ---- */
+        /* ----- TRUST STRIP (minimal, no icons except lock) ----- */
         .trust-strip {
             background: var(--navy);
-            color: var(--sand);
-            padding: 16px 0;
-            border-bottom: 2px solid var(--gold-muted);
+            color: var(--cream);
+            padding: 14px 0;
+            border-bottom: 2px solid var(--gold);
         }
         .trust-strip .container {
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
-            gap: 50px;
-            font-weight: 500;
+            gap: 40px;
+            font-weight: 400;
         }
-        .trust-strip i { color: var(--gold-muted); margin-right: 8px; }
+        .trust-strip i {
+            color: var(--gold);
+            margin-right: 8px;
+        }
 
-        /* ---- section title flow ---- */
+        /* ----- SECTION TITLE (elegant) ----- */
         .section-title {
             font-size: 3.8rem;
-            font-weight: 700;
+            font-weight: 600;
             color: var(--navy);
-            margin: 50px 0 30px;
+            margin: 70px 0 30px;
             letter-spacing: -0.02em;
         }
-
         .section-title span {
-            border-bottom: 6px solid var(--gold-muted);
+            border-bottom: 4px solid var(--gold);
             padding-bottom: 8px;
         }
 
-        /* ---- service grid (icon + text) more visual ---- */
+        /* ----- SERVICE GRID (few icons, just text minimal) ----- */
         .service-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
-            gap: 30px;
-            margin: 50px 0;
+            grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+            gap: 20px;
+            margin: 40px 0 60px;
         }
         .service-card {
             background: white;
-            border-radius: 30px;
-            padding: 35px 15px;
+            padding: 28px 12px;
             text-align: center;
-            box-shadow: 0 25px 40px -25px var(--navy);
-            border: 1px solid #d0dde8;
-            transition: transform 0.2s;
-        }
-        .service-card i {
-            font-size: 3.2rem;
-            color: var(--gold-muted);
-            margin-bottom: 15px;
-        }
-        .service-card span {
-            font-weight: 600;
-            font-size: 1.1rem;
+            border-radius: 30px;
+            box-shadow: 0 20px 30px -20px rgba(10,37,56,0.2);
+            border: 1px solid #e5eef5;
+            font-weight: 500;
             color: var(--navy);
+            transition: all 0.2s;
         }
         .service-card:hover {
-            transform: scale(1.02) translateY(-8px);
-            border-color: var(--gold-muted);
+            border-color: var(--gold);
+            transform: translateY(-6px);
+            box-shadow: 0 25px 30px -18px var(--gold);
         }
 
-        /* ---- IMAGE GALLERY BLOCK (MUCH FLOW) ---- */
-        .gallery-block {
+        /* ----- IMAGE GALLERY (flow, large images, no icons) ----- */
+        .gallery-grid {
             display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 20px;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
             margin: 60px 0;
         }
         .gallery-item {
             border-radius: 30px;
             overflow: hidden;
-            height: 280px;
-            box-shadow: 0 25px 35px -18px black;
+            height: 320px;
+            box-shadow: 0 25px 35px -20px black;
         }
         .gallery-item img {
             width: 100%;
             height: 100%;
             object-fit: cover;
-            transition: transform 0.4s;
+            transition: transform 0.5s;
         }
         .gallery-item:hover img {
-            transform: scale(1.07);
+            transform: scale(1.05);
         }
 
-        /* ---- double image + handyman list (flow) ---- */
+        /* ----- FLOW PANEL (image + text, minimal icons) ----- */
         .flow-panel {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -302,7 +246,7 @@
             background: var(--navy);
             border-radius: 50px;
             overflow: hidden;
-            margin: 70px 0;
+            margin: 80px 0;
             color: white;
         }
         .flow-panel-image {
@@ -318,8 +262,9 @@
             padding: 60px 40px;
         }
         .flow-panel-content h3 {
-            font-size: 3rem;
-            color: var(--gold-muted);
+            font-size: 3.2rem;
+            color: var(--gold);
+            margin-bottom: 25px;
         }
         .flow-list {
             display: grid;
@@ -332,210 +277,254 @@
             display: flex;
             align-items: center;
             gap: 12px;
-            border-bottom: 1px solid rgba(201,167,125,0.3);
+            border-bottom: 1px solid rgba(198,165,117,0.2);
             padding: 10px 0;
+            font-weight: 300;
         }
         .flow-list i {
-            color: var(--gold-muted);
-            font-size: 1.2rem;
+            color: var(--gold);
+            font-size: 1rem; /* small, discreet */
+            width: 20px;
         }
 
-        /* ---- contact section big images ---- */
-        .contact-flow {
+        /* ----- CONTACT SECTION (premium cards, minimal icons) ----- */
+        .contact-premium {
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 30px;
             margin: 70px 0;
         }
-        .contact-card {
+        .premium-card {
             background: white;
             border-radius: 40px;
             overflow: hidden;
             box-shadow: 0 30px 40px -25px #000;
         }
-        .contact-card img {
+        .premium-card img {
             width: 100%;
-            height: 300px;
+            height: 280px;
             object-fit: cover;
         }
-        .contact-info {
+        .card-content {
             padding: 35px;
         }
-        .contact-info i {
-            color: var(--gold-muted);
-            width: 40px;
-            font-size: 1.8rem;
+        .card-content h4 {
+            font-size: 2rem;
+            color: var(--navy);
+            margin-bottom: 20px;
         }
-        .btn-navy {
-            background: var(--navy);
-            color: white;
-            padding: 16px 35px;
+        .contact-line {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            font-size: 1.2rem;
+            margin: 15px 0;
+        }
+        .contact-line i {
+            color: var(--gold);
+            width: 30px;
+            font-size: 1.6rem;
+        }
+        .btn-outline {
+            border: 2px solid var(--navy);
+            color: var(--navy);
+            padding: 14px 30px;
             border-radius: 60px;
             text-decoration: none;
             display: inline-block;
             font-weight: 600;
-            margin-top: 20px;
+            margin-top: 15px;
         }
 
-        /* ---- footer navy flow ---- */
+        /* ----- FLOATING WHATSAPP (minimal) ----- */
+        .float-wa {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: #25D366;
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 36px;
+            box-shadow: 0 15px 25px rgba(0,80,0,0.3);
+            z-index: 9999;
+            border: 2px solid white;
+            text-decoration: none;
+            transition: 0.2s;
+        }
+
+        /* ----- FOOTER (clean, minimal) ----- */
         .footer {
             background: var(--navy-dark);
-            color: #baccd9;
+            color: #d0dfec;
             padding: 50px 0 30px;
-            border-top: 5px solid var(--gold-muted);
+            border-top: 5px solid var(--gold);
+            margin-top: 70px;
         }
         .footer-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
             gap: 40px;
         }
-        .footer a { color: var(--gold-muted); text-decoration: none; }
+        .footer a {
+            color: var(--gold);
+            text-decoration: none;
+        }
+        .footer i {
+            color: var(--gold);
+            margin-right: 8px;
+            width: 20px;
+        }
 
         /* responsive */
         @media (max-width: 900px) {
-            .hero-content h2 { font-size: 3.5rem; }
+            .hero-content h2 { font-size: 3.8rem; }
             .flow-panel { grid-template-columns: 1fr; }
-            .gallery-block { grid-template-columns: 1fr 1fr; }
-            .contact-flow { grid-template-columns: 1fr; }
+            .gallery-grid { grid-template-columns: 1fr 1fr; }
+            .contact-premium { grid-template-columns: 1fr; }
         }
         @media (max-width: 600px) {
-            .gallery-block { grid-template-columns: 1fr; }
+            .gallery-grid { grid-template-columns: 1fr; }
         }
     </style>
 </head>
 <body>
-    <!-- FLOATING WHATSAPP -->
-    <a href="https://wa.me/13342495472?text=Hello%20A%26S%20Construction!%20I%20saw%20your%20work%20online." class="float-wa" target="_blank"><i class="fab fa-whatsapp"></i></a>
+    <!-- FLOATING WHATSAPP (single icon) -->
+    <a href="https://wa.me/13342495472?text=Hello%20A%26S%20Construction" class="float-wa" target="_blank"><i class="fab fa-whatsapp"></i></a>
 
-    <!-- HEADER transparent (over hero) -->
+    <!-- HEADER with logo image -->
     <header class="header">
         <div class="container">
-            <div class="logo">
-                <h1>A&S CONSTRUCTION <span>& REMODELING LLC</span></h1>
+            <div class="logo-img">
+                <!-- premium logo image (SVG text) -->
+                <img src="logo.jpg"
+                     alt="A&S Construction">
             </div>
-            <div class="nav-cta">
-                <a href="tel:+13342495472" class="phone-link"><i class="fas fa-phone-alt"></i> (334) 249-5472</a>
-                <a href="#contact" class="estimate-link"><i class="fas fa-calculator"></i> Free quote</a>
+            <div class="header-cta">
+                <a href="tel:+13342495472" class="header-phone"><i class="fas fa-phone-alt"></i> 334-249-5472</a>
+                <a href="#contact" class="header-estimate"><i class="fas fa-calculator"></i> Estimate</a>
             </div>
         </div>
     </header>
 
-    <!-- HERO FULL SCREEN with huge image -->
+    <!-- HERO FULL SCREEN (one big image, minimal text) -->
     <section class="hero">
         <div class="hero-bg">
             <img src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?q=80&w=2070&auto=format&fit=crop" alt="construction site">
         </div>
         <div class="hero-overlay"></div>
         <div class="hero-content">
-            <h2>Your <i>dream home</i> <br>starts with a vision.</h2>
-            <div class="hero-tag"><i class="fas fa-map-marker-alt" style="color: var(--gold-muted);"></i> Florida · Georgia · Alabama</div>
-            <div class="hero-badge"><i class="fas fa-hard-hat"></i> Licensed & Insured · EST 2025</div>
+            <h2>Your <span>dream home</span> starts with a vision.</h2>
+            <div class="hero-tag"><i class="fas fa-map-marker-alt" style="color:var(--gold);"></i> Florida · Georgia · Alabama</div>
+            <div class="hero-badge">Licensed & Insured · EST 2025</div>
         </div>
     </section>
 
-    <!-- TRUST STRIP (licenses) -->
+    <!-- TRUST STRIP (minimal icons) -->
     <div class="trust-strip">
         <div class="container">
-            <span><i class="fas fa-id-card"></i> FL, GA, AL LICENSED</span>
-            <span><i class="fas fa-shield-alt"></i> $2M LIABILITY</span>
-            <span><i class="fas fa-certificate"></i> OSHA CERTIFIED</span>
-            <span><i class="fas fa-lock"></i> SSL SECURE</span>
+            <span><i class="fas fa-id-card"></i> FL · GA · AL Licensed</span>
+            <span><i class="fas fa-shield-alt"></i> $2M Liability</span>
+            <span><i class="fas fa-certificate"></i> OSHA Certified</span>
+            <span><i class="fas fa-lock"></i> SSL Secure</span>
         </div>
     </div>
 
-    <!-- MAIN SERVICE GRID (exact 16 items) -->
+    <!-- SERVICES (exact list, text only – minimal icons removed) -->
     <div class="container">
-        <h2 class="section-title"><span>Our expertise</span></h2>
+        <h2 class="section-title"><span>Expertise</span></h2>
     </div>
     <div class="container service-grid">
-        <div class="service-card"><i class="fas fa-cabinet-filing"></i><span>Cabinet Installation</span></div>
-        <div class="service-card"><i class="fas fa-trowel"></i><span>Concrete</span></div>
-        <div class="service-card"><i class="fas fa-umbrella-beach"></i><span>Decks</span></div>
-        <div class="service-card"><i class="fas fa-border-all"></i><span>Drywall</span></div>
-        <div class="service-card"><i class="fas fa-bolt"></i><span>Electrical</span></div>
-        <div class="service-card"><i class="fas fa-border-outer"></i><span>Flooring</span></div>
-        <div class="service-card"><i class="fas fa-home"></i><span>Framing</span></div>
-        <div class="service-card"><i class="fas fa-leaf"></i><span>Lawn Care</span></div>
-        <div class="service-card"><i class="fas fa-paint-brush"></i><span>Painting</span></div>
-        <div class="service-card"><i class="fas fa-wrench"></i><span>Plumbing</span></div>
-        <div class="service-card"><i class="fas fa-warehouse"></i><span>Pole Barns</span></div>
-        <div class="service-card"><i class="fas fa-water"></i><span>Pressure Wash</span></div>
-        <div class="service-card"><i class="fas fa-home"></i><span>Roofing</span></div>
-        <div class="service-card"><i class="fas fa-archive"></i><span>Siding</span></div>
-        <div class="service-card"><i class="fas fa-ruler"></i><span>Trim & Molding</span></div>
-        <div class="service-card"><i class="fas fa-window-maximize"></i><span>Windows & Doors</span></div>
+        <div class="service-card">Cabinet Installation</div>
+        <div class="service-card">Concrete</div>
+        <div class="service-card">Decks</div>
+        <div class="service-card">Drywall</div>
+        <div class="service-card">Electrical</div>
+        <div class="service-card">Flooring</div>
+        <div class="service-card">Framing</div>
+        <div class="service-card">Lawn Care</div>
+        <div class="service-card">Painting</div>
+        <div class="service-card">Plumbing</div>
+        <div class="service-card">Pole Barns</div>
+        <div class="service-card">Pressure Wash</div>
+        <div class="service-card">Roofing</div>
+        <div class="service-card">Siding</div>
+        <div class="service-card">Trim & Molding</div>
+        <div class="service-card">Windows & Doors</div>
     </div>
 
-    <!-- IMAGE GALLERY BLOCK (MUCH FLOW - 4 images) -->
-    <div class="container gallery-block">
-        <div class="gallery-item"><img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=2070&auto=format&fit=crop" alt="modern house"></div>
-        <div class="gallery-item"><img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?q=80&w=2053&auto=format&fit=crop" alt="kitchen"></div>
-        <div class="gallery-item"><img src="https://scontent.fnbo9-1.fna.fbcdn.net/v/t39.30808-6/626938985_122121103599038762_301903200327139197_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeFEZve_h23NvrWYkvXO7n_mW0Ofk9ws0plbQ5-T3CzSmZ-ruj7pLh8z7LM11v9KCC3tjCH7HVNwpmEycujOPcYO&_nc_ohc=wnNF9XFn7x8Q7kNvwGrC4ie&_nc_oc=AdlueV-kouue0Pe51qgB-MQznfzqs7FfNr38RfW_R8eJdtqAx51_JTOdaDIlj2Ev8-g&_nc_pt=5&_nc_zt=23&_nc_ht=scontent.fnbo9-1.fna&_nc_gid=J7l4nEFF10OBazWdxgPxjA&oh=00_AfsVbaPBSRj7b3DRBnBtDYyQgYbeoOF42d8yVOFotY6Lbg&oe=6999FA0C" alt="pole barn"></div>
-        <div class="gallery-item"><img src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?q=80&w=2070&auto=format&fit=crop" alt="deck"></div>
+    <!-- GALLERY (3 large images, no icons) -->
+    <div class="container gallery-grid">
+        <div class="gallery-item"><img src="https://scontent.fnbo9-1.fna.fbcdn.net/v/t39.30808-6/595100664_122114543307038762_7854894077389644154_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeHhSjAsGsURwSb5roKpZScLbNgAYon9I6Vs2ABiif0jpUmjbbQnOjkOEq824PeJjhIm5Hp2RIjnWGqgDjQLMLGO&_nc_ohc=fc0RY0ox38oQ7kNvwGOmMSn&_nc_oc=AdmJb8I37upLDgh8hwhh3IDGRH6em1NeVeL_DMB50MxiE9OV9gBAgNK4ANW4mNpdGvg&_nc_pt=5&_nc_zt=23&_nc_ht=scontent.fnbo9-1.fna&_nc_gid=9MCTu6V_9u79aiMj4KjLgw&oh=00_AfvTo5etz2f5Zbs3nOwW_IU9IvR_RJFvsWJltI9gHIUa0A&oe=699A1ADF" alt=""></div>
+        <div class="gallery-item"><img src="https://scontent.fnbo9-1.fna.fbcdn.net/v/t39.30808-6/626938985_122121103599038762_301903200327139197_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeFEZve_h23NvrWYkvXO7n_mW0Ofk9ws0plbQ5-T3CzSmZ-ruj7pLh8z7LM11v9KCC3tjCH7HVNwpmEycujOPcYO&_nc_ohc=wnNF9XFn7x8Q7kNvwGrC4ie&_nc_oc=AdlueV-kouue0Pe51qgB-MQznfzqs7FfNr38RfW_R8eJdtqAx51_JTOdaDIlj2Ev8-g&_nc_pt=5&_nc_zt=23&_nc_ht=scontent.fnbo9-1.fna&_nc_gid=J7l4nEFF10OBazWdxgPxjA&oh=00_AfsVbaPBSRj7b3DRBnBtDYyQgYbeoOF42d8yVOFotY6Lbg&oe=6999FA0C" alt=""></div>
+        <div class="gallery-item"><img src="https://scontent.fnbo10-1.fna.fbcdn.net/v/t39.30808-6/600261023_122115603381038762_3445741459797720856_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeFwnFPPyz3BOEbsQ-uArfScve2kun0lZcC97aS6fSVlwP-3CV1tXO_S844Sd7YedMQ3rgT7h0UtkE0JYg55rwtT&_nc_ohc=cXB7-Xvq5HwQ7kNvwEk65Lq&_nc_oc=AdnLP9vVigJpfGC67KWF_pQTdRJVt7Hg_CSzuCpgupX5MWcPC9-qTpRBpyhXeKFOlgs&_nc_pt=5&_nc_zt=23&_nc_ht=scontent.fnbo10-1.fna&_nc_gid=gWENscv1dcifJEDK84b1DQ&oh=00_AfsrCDuJ1lpYy0K3EdvLAb1fbeEKvz1NAUXtkkZC3N6ZJg&oe=699A0528" alt=""></div>
     </div>
 
-    <!-- FLOW PANEL: image + full handyman list (dark navy) -->
+    <!-- FLOW PANEL: image + handyman list (very few icons) -->
     <div class="container flow-panel">
         <div class="flow-panel-image">
-            <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?q=80&w=2070&auto=format&fit=crop" alt="contractor working">
+            <img src="https://scontent.fnbo9-1.fna.fbcdn.net/v/t39.30808-6/595147057_122114540487038762_2341373225170935733_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeE8f-_LpwHgbUCAgdj-g-Z1dX2nWkzJ8W91fadaTMnxb5w9WYQMSb0KKu1444sHkNo2C1NEouFhewmorOnoYD7E&_nc_ohc=R18TfOnwhCQQ7kNvwH588-B&_nc_oc=AdmuQ8-qK2oA1zbzPJzNpCHyQ9IhXmzx9oNZy4HWidv6nBrLPZwy0g7SpOewtMNCmUc&_nc_pt=5&_nc_zt=23&_nc_ht=scontent.fnbo9-1.fna&_nc_gid=W55JjAt9x-QJCWb4zaV4LA&oh=00_AfuR-nFR91C1WNGRrLyWDRwYwacvUHODdpqz_TisHI73MA&oe=699A0F67" alt="craftsman">
         </div>
         <div class="flow-panel-content">
-            <h3>Reliable Handyman & Remodeling</h3>
-            <p style="margin-bottom:20px;">Superior craftsmanship, dependable service, competitive pricing. Licensed & insured.</p>
+            <h3>Handyman & Remodeling</h3>
+            <p style="font-size:1.2rem; margin-bottom:20px;">Superior craftsmanship, dependable service, competitive pricing. Licensed & insured.</p>
             <ul class="flow-list">
-                <li><i class="fas fa-hammer"></i> Handyman Services</li>
-                <li><i class="fas fa-home"></i> Home Remodeling</li>
-                <li><i class="fas fa-border-outer"></i> Flooring (Vinyl)</li>
-                <li><i class="fas fa-paint-brush"></i> Painting</li>
-                <li><i class="fas fa-border-all"></i> Drywall Installation</li>
-                <li><i class="fas fa-gavel"></i> Carpentry & Framing</li>
-                <li><i class="fas fa-cabinet-filing"></i> Cabinet Installation</li>
-                <li><i class="fas fa-window-maximize"></i> Window/Door Install</li>
-                <li><i class="fas fa-ruler"></i> Trim & Molding</li>
-                <li><i class="fas fa-archive"></i> Siding</li>
-                <li><i class="fas fa-home"></i> Roofing</li>
-                <li><i class="fas fa-fence"></i> Fences & Decks</li>
-                <li><i class="fas fa-trowel"></i> Concrete Work</li>
-                <li><i class="fas fa-warehouse"></i> Pole Barns</li>
-                <li><i class="fas fa-bolt"></i> Electrical/Plumbing</li>
-                <li><i class="fas fa-water"></i> Pressure Wash</li>
-                <li><i class="fas fa-leaf"></i> Lawn Care</li>
+                <li><i class="fas fa-check"></i> Handyman Services</li>
+                <li><i class="fas fa-check"></i> Home Remodeling</li>
+                <li><i class="fas fa-check"></i> Flooring (Vinyl & more)</li>
+                <li><i class="fas fa-check"></i> Painting</li>
+                <li><i class="fas fa-check"></i> Drywall Installation</li>
+                <li><i class="fas fa-check"></i> Carpentry & Framing</li>
+                <li><i class="fas fa-check"></i> Cabinet Installation</li>
+                <li><i class="fas fa-check"></i> Window/Door Installation</li>
+                <li><i class="fas fa-check"></i> Trim & Molding</li>
+                <li><i class="fas fa-check"></i> Siding</li>
+                <li><i class="fas fa-check"></i> Roofing</li>
+                <li><i class="fas fa-check"></i> Fences & Decks</li>
+                <li><i class="fas fa-check"></i> Concrete Work</li>
+                <li><i class="fas fa-check"></i> Pole Barns</li>
+                <li><i class="fas fa-check"></i> Electrical/Plumbing</li>
+                <li><i class="fas fa-check"></i> Pressure Washing</li>
+                <li><i class="fas fa-check"></i> Lawn Care</li>
             </ul>
-            <p><i class="fas fa-phone-alt" style="color:var(--gold-muted);"></i> Call/text: (334) 249-5472 or (334) 237-9993</p>
         </div>
     </div>
 
-    <!-- CONTACT SECTION with two big image cards -->
-    <div id="contact" class="container contact-flow">
-        <div class="contact-card">
-            <img src="https://scontent.fnbo9-1.fna.fbcdn.net/v/t39.30808-6/596399571_122114543253038762_1450499296457839925_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeHZX4mj0UHOKhctm2g7TDfW13I2rLsGdTbXcjasuwZ1NjHk_YXscsGjBml5N2E7eaGaQKB3SIkuRHkWWFJ6f8JX&_nc_ohc=UJbGc_38G5oQ7kNvwGDmjxw&_nc_oc=AdkH5SMNaZA208J1wgnDb1qwtBwC0PYShk_zwuXZ2SxGuhhW4Ghd7YtyFwYNCk8UDG8&_nc_pt=5&_nc_zt=23&_nc_ht=scontent.fnbo9-1.fna&_nc_gid=lrNz8AYu2bn76D0oaa8Q5w&oh=00_Aft5PQ85ja_tdkTDDP9uB3mVJbodX3AnnLiuwPUfremIhw&oe=699A09B2" alt="call us">
-            <div class="contact-info">
-                <h3><i class="fas fa-phone"></i> Call or text</h3>
-                <p><i class="fas fa-phone-alt"></i> +1 334-249-5472</p>
-                <p><i class="fas fa-phone-alt"></i> +1 334-237-9993</p>
-                <p><i class="fas fa-envelope"></i> asgonzalezcompanyllc@gmail.com</p>
-                <a href="tel:+13342495472" class="btn-navy"><i class="fas fa-calendar-check"></i> Free estimate</a>
+    <!-- CONTACT PREMIUM CARDS (two images, minimal icons) -->
+    <div id="contact" class="container contact-premium">
+        <div class="premium-card">
+            <img src="https://scontent.fnbo9-1.fna.fbcdn.net/v/t39.30808-6/596399571_122114543253038762_1450499296457839925_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeHZX4mj0UHOKhctm2g7TDfW13I2rLsGdTbXcjasuwZ1NjHk_YXscsGjBml5N2E7eaGaQKB3SIkuRHkWWFJ6f8JX&_nc_ohc=UJbGc_38G5oQ7kNvwGDmjxw&_nc_oc=AdkH5SMNaZA208J1wgnDb1qwtBwC0PYShk_zwuXZ2SxGuhhW4Ghd7YtyFwYNCk8UDG8&_nc_pt=5&_nc_zt=23&_nc_ht=scontent.fnbo9-1.fna&_nc_gid=Sy4SKU9LNRSjW-nJCXojSQ&oh=00_Aft13vP8sM8VDoLkvwMXSCXmXmaRmWFvgYQFl8RCRGtzjQ&oe=699A09B2" alt="call us">
+            <div class="card-content">
+                <h4>Contact</h4>
+                <div class="contact-line"><i class="fas fa-phone-alt"></i> +1 334-249-5472</div>
+                <div class="contact-line"><i class="fas fa-phone-alt"></i> +1 334-237-9993</div>
+                <div class="contact-line"><i class="fas fa-envelope"></i> asgonzalezcompanyllc@gmail.com</div>
+                <a href="tel:+13342495472" class="btn-outline">Free estimate</a>
             </div>
         </div>
-        <div class="contact-card">
-            <img src="https://scontent.fnbo10-1.fna.fbcdn.net/v/t39.30808-6/595226710_122114543295038762_2394340421410831369_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeHfVlk9-lgfwt3DC98GYG7CNS-4FkyHA4k1L7gWTIcDidD7hqfAYecURMTfXHA_vBVeXUwj3r2EaoE7rwD9irVC&_nc_ohc=zdgvtzT1YewQ7kNvwGDZ-SB&_nc_oc=Adn7X2nAWJgw_3n0esyODXo8aOzM9fPWvaXL2cEB8SNyxme5Ll9SXWij4x_AjFaO4QY&_nc_pt=5&_nc_zt=23&_nc_ht=scontent.fnbo10-1.fna&_nc_gid=r29p7cW-F37uNxCg0dW-fw&oh=00_AfsD2NBJPYK8XIck7ayHEqZqDeckzOaG5FUYpCJ1Ism9Rg&oe=699A2B50" alt="facebook">
-            <div class="contact-info">
-                <h3><i class="fab fa-facebook"></i> Connect with us</h3>
-                <p>Follow our latest projects and reviews.</p>
-                <a href="https://web.facebook.com/profile.php?id=61581162876355" target="_blank" class="btn-navy" style="background: var(--navy-light);"><i class="fab fa-facebook-f"></i> A&S Facebook</a>
-                <p style="margin-top:15px;"><i class="fas fa-shield"></i> Licensed & Insured FL, GA, AL</p>
+        <div class="premium-card">
+            <img src="https://scontent.fnbo10-1.fna.fbcdn.net/v/t39.30808-6/595226710_122114543295038762_2394340421410831369_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeHfVlk9-lgfwt3DC98GYG7CNS-4FkyHA4k1L7gWTIcDidD7hqfAYecURMTfXHA_vBVeXUwj3r2EaoE7rwD9irVC&_nc_ohc=zdgvtzT1YewQ7kNvwGDZ-SB&_nc_oc=Adn7X2nAWJgw_3n0esyODXo8aOzM9fPWvaXL2cEB8SNyxme5Ll9SXWij4x_AjFaO4QY&_nc_pt=5&_nc_zt=23&_nc_ht=scontent.fnbo10-1.fna&_nc_gid=YDrrcNi64JcDgQSSnrUbiA&oh=00_Afu0EBYz9jz3Cy932Q6oJiMGan_V4sJxnpLbPCBB4ytUNQ&oe=699A2B50" alt="facebook">
+            <div class="card-content">
+                <h4>Connect</h4>
+                <div class="contact-line"><i class="fab fa-facebook"></i> <a href="https://web.facebook.com/profile.php?id=61581162876355" target="_blank">A&S Facebook</a></div>
+                <div class="contact-line"><i class="fas fa-id-card"></i> Licensed FL, GA, AL</div>
+                <div class="contact-line"><i class="fas fa-calendar-alt"></i> EST 2025</div>
             </div>
         </div>
     </div>
 
-    <!-- extra phone reminder (as per prompt) -->
-    <div class="container" style="background: white; border-radius: 80px; padding: 25px; text-align: center; border: 2px solid var(--navy); margin-bottom: 40px;">
-        <span style="margin-right: 35px;"><i class="fas fa-comment" style="color: var(--gold-muted);"></i> (334) 249-5472</span>
-        <span style="margin-right: 35px;"><i class="fas fa-comment" style="color: var(--gold-muted);"></i> (334) 237-9993</span>
-        <span><i class="fas fa-envelope-open" style="color: var(--gold-muted);"></i> asgonzalezcompanyllc@gmail.com</span>
+    <!-- minimal extra contact row (no icons overload) -->
+    <div class="container" style="background: white; border-radius: 80px; padding: 20px; text-align: center; border: 1px solid var(--gold); margin-bottom: 40px;">
+        <span style="margin:0 20px;">📞 (334) 249-5472</span>
+        <span style="margin:0 20px;">📞 (334) 237-9993</span>
+        <span style="margin:0 20px;">✉️ asgonzalezcompanyllc@gmail.com</span>
     </div>
 
-    <!-- FOOTER -->
+    <!-- FOOTER (minimal icons) -->
     <footer class="footer">
         <div class="container footer-grid">
             <div>
@@ -549,11 +538,11 @@
                 <i class="fas fa-envelope"></i> asgonzalezcompanyllc@gmail.com</p>
             </div>
             <div>
-                <h4>Legal</h4>
-                <p>Licensed & Insured · SSL Secured<br>OSHA Certified</p>
+                <h4>Social</h4>
+                <p><i class="fab fa-facebook"></i> <a href="https://web.facebook.com/profile.php?id=61581162876355" target="_blank">Facebook</a></p>
             </div>
         </div>
-        <div class="container" style="text-align:center; margin-top:40px; border-top:1px solid #1f4c6b; padding-top:25px;">
+        <div class="container" style="text-align:center; margin-top:40px; border-top:1px solid #254f6e; padding-top:25px;">
             © 2025 A&S Construction & Remodeling LLC — Your dream home starts with a vision.
         </div>
     </footer>
